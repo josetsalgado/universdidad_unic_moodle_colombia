@@ -1304,7 +1304,7 @@ i.icon {
         display: inline-block;
     }
     a.nav-link {
-        font-size: 18px;
+        font-size: 16px;
         padding: 26px 20px;
         margin-bottom: 2px;
         &:hover {
@@ -1401,7 +1401,7 @@ i.icon {
     .header-main .infoarea .nav-item {
         display: inline-block;
         a.nav-link {
-            padding: 35px 20px;
+            padding: 42px 20px;
         }
     }
 }
@@ -3883,9 +3883,8 @@ body {background:$bgbody;}
 
 /*02. nav-bar e-abc*/
 #header{
-    
-    border-bottom: solid #1a2d2c;
-    background: linear-gradient(to bottom, #1f3f3e 0%,#1f3f3e 50%,#1f3f3e 50%,#1a2d2c 50%,#1a2d2c 100%);
+    background: #1f3f3e;
+    border-bottom: 1px solid #1f3f3e;
     .nav.navbar-nav span,
     .nav.navbar-nav span a,
     .usermenu a.dropdown-toggle,
@@ -3901,8 +3900,16 @@ body {background:$bgbody;}
 
 /*03. header e-abc(Logo se sube de administracion)*/
 .header-main {
-     background: $headermain; /* Old browsers */
-     .navbar-light {background-color: transparent;}
+     /*background:$headermain; *//* Old browsers */
+     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fffffe+0,e6e194+100 */
+
+     background: rgb(255,255,254); /* Old browsers */
+     background: -moz-linear-gradient(left,  rgba(255,255,254,1) 0%, rgba(230,225,148,1) 100%); /* FF3.6-15 */
+     background: -webkit-linear-gradient(left,  rgba(255,255,254,1) 0%,rgba(230,225,148,1) 100%); /* Chrome10-25,Safari5.1-6 */
+     background: linear-gradient(to right,  rgba(255,255,254,1) 0%,rgba(230,225,148,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffffe', endColorstr='#e6e194',GradientType=1 ); /* IE6-9 */
+
+     .navbar-light {background-color: transparent; background: url([[pix:theme|bg_header]]) no-repeat;/*login*/}
      .container {padding: 0px;}
      a.nav-link {color: $headermainlink;} /*Español - Internacional ‎(es)‎*/
 }/*end*/
@@ -3948,8 +3955,8 @@ background: $white;padding: 20px; border: 1px solid $color_gray_nurse_approx;
 
 
 /*06. menuflotante*/
-#nav-drawer {background: #1f3f3e; height: calc(100% - 50px) !important;
-    .list-group-item {border-radius: 0px; }/*padding Menuflotante*/
+#nav-drawer {background: #999999; height: calc(100% - 50px) !important;
+    .list-group-item {border-radius: 0px; padding: .25rem 1.25rem !important; }/*padding Menuflotante*/
     .list-group-item-action:focus,
     .list-group-item-action:hover {background: $drawerhover;}
 }/*end*/
@@ -4100,4 +4107,28 @@ a:active, a.dimmed, a.dimmed:link{
     right: 10px;
 }
 
+#frontpage-course-list h2, #frontpage-category-names h2, #frontpage-category-combo h2{
+	font-weight: 700;
+}
 
+
+
+
+
+
+
+.header-main .wrapper>* {
+    padding-top: 10px;
+    padding-right: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
+    flex: 1 33%;
+}
+
+
+.header-main .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: 700;
+    text-align: center;
+}

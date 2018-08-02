@@ -63,8 +63,55 @@
     </div>
 </header>
 
-<div class="header-main" style="margin-top: 50px;">
-    <div class="bg-header-unicundi"></div>
+<div class="header-main">
+    <div class="container">
+
+	<nav class="navbar navbar-light bg-faded">
+
+     <!-- centra el logotipo del header -->
+     <div style="text-align: center; width:100%;">
+                    <span class="logo">
+                        <img src="{{logourl}}" alt="{{sitename}}">
+                    </span>
+     </div>
+   <!-- centra el logotipo del header - END -->
+
+                <a href="{{{ config.wwwroot }}}/?redirect=0" class="navbar-brand {{# logourl }}has-logo{{/ logourl }}
+                {{^ logourl }}
+                    hidden-sm-down
+                {{/ logourl }}
+                    ">
+                {{# logourl }}
+
+
+
+               
+
+
+
+                {{/ logourl }}
+                {{^ logourl }}
+                    <span class="site-name hidden-sm-down">{{{ sitename }}}</span>
+                {{/ logourl }}
+                </a>
+
+	<button class="{{navbarclass}}" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+
+	<div class="collapse navbar-toggleable-md" id="navbarResponsive">
+
+        <div class="infoarea ">
+            <!-- custom_menu -->
+            {{{ output.custom_menu }}}
+            <!-- page_heading_menu -->
+            {{{ output.page_heading_menu }}}
+
+        </div>
+
+    </div>
+    </nav>
+
+    </div>
 </div>
+
 
 

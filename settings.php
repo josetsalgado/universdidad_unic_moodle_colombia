@@ -234,6 +234,7 @@ if (is_siteadmin()) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
     
+    
     //imagen primer anuncio 
     $name = 'theme_unicundi/logoanuncios1';
     $title = "Imagen primer anuncio";

@@ -142,7 +142,9 @@ function theme_unicundi_pluginfile($course, $cm, $context, $filearea, $args, $fo
             return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
         } else if ($filearea === 'logologin') {
             return $theme->setting_file_serve('logologin', $args, $forcedownload, $options);
-        }  else if ($filearea === 'logofooter') {
+        } else if ($filearea === 'logofooter') {
+            return $theme->setting_file_serve('logofooter', $args, $forcedownload, $options);
+        } else if ($filearea === 'bgheader') {
             return $theme->setting_file_serve('logofooter', $args, $forcedownload, $options);
         } else if ($filearea === 'logoanuncios1') {
             return $theme->setting_file_serve('logoanuncios1', $args, $forcedownload, $options);

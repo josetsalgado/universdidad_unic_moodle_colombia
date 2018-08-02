@@ -321,6 +321,16 @@ class theme_unicundi_core_renderer extends theme_boost\output\core_renderer {
         return $html;
     }
     
+    public function bgimgheader(){
+        global $CFG;
+        if($backgroundimage = $this->page->theme->setting_file_url('bgheader', 'bgheader')){
+            return $backgroundimage;
+        }else{
+            return $CFG->wwwroot."/theme/unicundi/pix/header_cundinamarca.png";
+        }
+        
+    }
+    
     public function bgheader(){
         global $CFG;
         $img = $CFG->wwwroot."/theme/unicundi/pix/header_cundinamarca.png"; 
