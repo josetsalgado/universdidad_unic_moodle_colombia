@@ -1,0 +1,132 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_unicundi/footer
+
+    Admin time setting template.
+
+    unicundi footer layout template.
+}}
+<footer id="page-footer" class="p-y-1 bg-inverse">
+    <div id="footer">
+    <div class="footer-main">
+    <div class="container">
+        <div class="row">
+
+
+<div class="col-md-6">
+            <div class="infoarea">
+              <div class="footer-logo">
+                {{{ output.logofooter }}}
+              </div>  
+          </div>
+          <div class="social-media">
+            <ul>
+
+<!-- 01. TWITTER -->
+            {{# twurl}}
+                <li class="smedia-02"><a target="_blank" href="{{twurl}}">
+                  <!-- circulo -->
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                      </span>
+                  <!-- Fin  circulo -->
+                </a></li>
+            {{/ twurl}}
+ <!-- 01. TWITTER - END-->
+
+ <!-- 02. FACEBOOK -->           
+             {{# fburl}}
+                <li class="smedia-01"><a target="_blank" href="{{fburl}}">
+                  <!-- circulo -->
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                      </span>
+                  <!-- Fin  circulo -->
+                </a></li>
+            {{/ fburl}}
+<!-- 02. FACEBOOK - END -->
+<!-- 03. PINTEREST -->
+            {{# pinurl}}
+                <li class="smedia-04"><a target="_blank" href="{{pinurl}}">
+                  <!-- circulo -->
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+                      </span>
+                  <!-- Fin  circulo -->
+                </a></li>
+            {{/ pinurl}}
+<!-- 03. PINTEREST - END -->
+<!-- 04. GOOGLE+ -->
+            {{# gpurl}}
+                <li class="smedia-04"><a target="_blank" href="{{gpurl}}">
+                  <!-- circulo -->
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-google fa-stack-1x fa-inverse"></i>
+                      </span>
+                  <!-- Fin  circulo -->
+                </a></li>
+            {{/ gpurl}}
+<!-- 04. GOOGLE+ - END-->
+            </ul>
+          </div>
+</div>
+
+
+<div class="col-md-6">
+          <div class="contact-info" style="font-weight: 700;">
+            <h2 class="nopadding" style="color: #ffffff">Contáctenos</h2>
+
+            {{# phoneno}}
+              <i class="fa fa-phone-square"></i> Teléfono : {{phoneno}}<br>
+            {{/ phoneno}}
+            {{# emailid}}
+              <i class="fa fa-envelope-o"></i> {{email}} : <a class="mail-link" href="mailto:{{emailid}}">{{emailid}}</a><br>
+            {{/ emailid}}
+            </p>
+
+          </div>
+         {{# url}}
+        {{/ url}}
+</div>
+
+        
+
+        
+        
+      </div>
+    </div>
+  </div>
+
+  </div>
+</footer>
+<!--E.O.Footer-->
+
+<footer>
+{{{output.standard_footer_html}}}
+</footer>
+{{{output.standard_end_of_body_html}}}
+{{#js}}
+require(['theme_boost/loader']);
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
+{{/js}}
